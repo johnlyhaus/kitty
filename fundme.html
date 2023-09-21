@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Embedded Code Refresh</title>
+  <script>
+    function refreshEmbed() {
+      var embedContainer = document.getElementById('embed-container');
+      embedContainer.innerHTML = '<div class="gfm-embed" data-url="https://www.gofundme.com/f/jackys-knee-op/widget/medium"></div><script defer src="https://www.gofundme.com/static/js/embed.js"></script>';
+    }
+
+    window.onload = function() {
+      // Refresh the embed initially
+      refreshEmbed();
+
+      // Refresh the embed every 30 seconds
+      setInterval(refreshEmbed, 30000);
+    };
+  </script>
+</head>
+<body>
+  <div id="embed-container"></div>
+</body>
+</html>
